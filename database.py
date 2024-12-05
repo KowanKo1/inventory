@@ -1,7 +1,7 @@
 from sqlmodel import SQLModel, Session, create_engine
 
 # SQLite Database
-DATABASE_URL = "postgresql://postgres:postgres@postgres-local:5432/kg-procurement"
+DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/"
 
 engine = create_engine(DATABASE_URL, echo=True)
 

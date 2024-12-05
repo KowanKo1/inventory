@@ -1,0 +1,52 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+.Python
+
+# Dependency files
+*.log
+*.sqlite3
+*.db
+*.db-journal
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/project-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore static file output (if any)
+staticfiles/
+media/
+
+# Ignore test coverage and cache
+*.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+
+# Ignore temporary files created by editors
+*.bak
+*.tmp
+~$*
+
+# Ignore Python egg metadata
+*.egg-info/
+dist/
+build/
+
+# FastAPI specific (optional)
+templates/*.tmp
