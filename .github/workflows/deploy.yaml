@@ -42,4 +42,4 @@ jobs:
             -e TRANSACTION_SERVICE_URL="http://localhost:8002" \
             -e INVENTORY_SERVICE_URL="http://localhost:8001" \
             -e AUTHENTICATION_SERVICE_URL="http://localhost:8000" \
-            ${{ secrets.DOCKER_USERNAME }}/${{ secrets.CONTAINER_NAME_HISTORY }}:latest'
+            ${{ secrets.DOCKER_USERNAME }}/${{ secrets.CONTAINER_NAME_INVENTORY }}:latest'
