@@ -67,7 +67,7 @@ def post_transaction_to_service(item_id: int, account_email:str, quantity: int, 
         'account_email': account_email,
         'item_id': item_id,
         'transaction_type': transaction_type,
-        'quantity': 10,
+        'quantity': quantity,
     }
     # print('payload: ',transaction_data)
 
