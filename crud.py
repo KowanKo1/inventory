@@ -24,7 +24,7 @@ def get_items(db: Session, category_id: Optional[int] = None, email:str=None):
     if category_id:
         query = query.where(Item.category_id == category_id)
     if email:
-        query = query.where(Item.email == email)
+        query = query.where(Item.account_email == email)
     return db.exec(query).all()
 
 def get_item_by_id(db:Session, id:str) -> Item:
