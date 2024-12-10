@@ -23,7 +23,7 @@ def create_new_item(item: Item, request: Request, db: Session = Depends(get_db))
 def read_items(request: Request, category_id: Optional[int] = None, db: Session = Depends(get_db)):
     if request.headers.get('origin') != AUTHENTICATION_SERVICE_URL:
         raise HTTPException(status_code=403, detail="Origin not allowed.")
-    return get_items(db, category_id)
+    return get_items(db, category_id, request.headers.get("email"))
 
 @router.put("/{item_id}/update_stock", response_model=Item)
 def modify_stock(request: Request, item_id: int, quantity: int, transaction_type: str, db: Session = Depends(get_db)):

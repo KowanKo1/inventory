@@ -19,10 +19,12 @@ def create_item(db: Session, item: Item):
 
     return item
 
-def get_items(db: Session, category_id: Optional[int] = None):
+def get_items(db: Session, category_id: Optional[int] = None, email:str=None):
     query = select(Item)
     if category_id:
         query = query.where(Item.category_id == category_id)
+    if email:
+        query = query.where(Item.email == email)
     return db.exec(query).all()
 
 def get_item_by_id(db:Session, id:str) -> Item:
